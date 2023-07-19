@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New&display=swap">
+    <style>
+        
+        body {
+               font-family: 'TH Sarabun New', Arial, sans-serif;
+               font-size: 16px;
+               font-weight: normal;
+           }   
+        .container{
+               margin-left: 50px;
+               margin-right: 50px;
+           }   
+        .head1{
+            text-align: center;
+
+        }
+        .logo{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo img{
+            display: block;
+            margin: 0 auto;
+            width: 80px;
+            height: 80px;
+        }
+        h1{
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .expla-info p{
+            text-indent: 2.5em;
+            margin: 0;
+        }
+
+        .table1{
+            padding-top: 10px;
+            margin: auto;
+        }
+        .table1 td:nth-child(2) {
+            width: 40px;
+        }
+
+        .table1 td:nth-child(1) {
+            width: 40px;
+        }
+        .table2{
+            border-collapse: collapse;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .table2 thead tr:first-child {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .table2 td:nth-child(1) {
+            width: 35px;
+            text-align: center;
+        }
+
+        .table2 td:nth-child(2) {
+            margin-left: 15px ;
+            padding-left: 10px;
+        }
+
+        .table2 td:nth-child(3) {
+            width: 55px;
+            text-align: center;
+        }
+        .table2 td:nth-child(4) {
+            width: 55px;
+            text-align: center;
+        }
+        .table2 td:nth-child(5) {
+            width: 55px;
+            text-align: center;
+        }
+        .table2 td:nth-child(6) {
+            width: 55px;
+            text-align: center;
+        }
+
+        .table2 thead tr:first-child,
+        .table2 tbody:not(#questionnaire) tr:first-child {
+            font-weight: bold;
+            text-align: center;
+        }
+        #assessment {
+        font-weight: bold;
+    }
+
+        .botton-info{
+            margin-top: 20px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            position: absolute;
+            bottom: 30px;
+            left: 80px;
+
+        }
+        .botton-info img{
+            width: 20px;
+            height: 20px;
+            margin-bottom: 5px ;
+        }
+        .botton-info p{
+            margin-left: 10px ;
+        }
+        
+        .sheet{
+            position: relative;
+        }
+
+        .funkyradio tr {
+            clear: both;
+            overflow: hidden;
+        }
+
+
+        .radio-container {
+        position: relative;
+        display: inline-block;
+        padding-left: 30px;
+        margin-right: 15px;
+        cursor: pointer;
+        }
+
+        .radio-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        }
+
+        .checkmark {
+        position: absolute;
+        bottom: -7px;
+        left: -5px;
+        height: 20px;
+        width: 55px;
+        background-color: #fff;
+        }
+
+        .radio-container:hover .checkmark {
+        background-color: #ccc;
+        }
+
+        .radio-container input:checked ~ .checkmark {
+        background-color: #ffffff;
+        }
+
+        .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        }
+
+        .radio-container input:checked ~ .checkmark:after {
+        display: block;
+        }
+
+        .radio-container .checkmark:after {
+        left: 25px;
+        top: 3px;
+        width: 3px;
+        height: 10px;
+        border: solid rgb(19, 19, 19);
+        border-width: 0 1.5px 1.5px 0;
+        transform: rotate(45deg);
+        }
+        #assessment {
+            font-weight: bold;
+            text-align: center;
+        }
+        .person-profile {
+            margin: 0 20px 0 20px;
+        }
+
+    </style>   
+</head>
+<script>
+    
+</script>
+<body class="A4">
+    <section class="sheet padding-10mm">
+        <div class="container">
+            <div class="logo"><img src="./logo.png"></div>
+            <h2 class="head1">แบบประเมินความสุดฉบับ 15 ข้อ</h2>
+            <div class="person-info">
+                <h1>ข้อมูล ผู้ประเมิน</h1>
+                <dd>
+                    <label><b>ชื่อ :</b></label>
+                    <span class="person-profile">อลิซ</span>
+                    <label><b>นามสกุล :</b></label>
+                    <span class="person-profile">แซมเบอร์ก</span>
+                    <label><b>เลขที่บัตร :</b></label>
+                    <span class="person-profile">406</span>
+                  </dd>           
+             </div>
+            <div class="expla-info">
+                <h1>คำชี้แจง</h1>
+                <p >กรุณากาเครื่องหมาย <span style="font-size: 10px;">✔</span> ลงในช่องที่มีข้อความตรงกับตัวท่านมากที่สุด</p>
+                <p >คำถามต่อไปนี้จะถามถึงประสบการณ์ของท่านในช่วง 1 เดือนที่ผ่านมา ให้ท่านสำรวจตัว
+                    ท่านเองและประเมินเหตุการณ์ อาการหรือความคิดเห็นและความรู้สึกของท่านว่าอยู่ในระดับใด และตอบลงในช่องคำตอบที่เป็นจริงกับตัวท่านมากที่สุด โดยคำตอบจะมี 4 ตัวเลือก คือ</p>
+            </div>
+            <div>
+                <table class="table1">
+                    <tr>
+                        <td>ไม่เลย</td>
+                        <td>หมายถึง</td>
+                        <td>ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก หรือไม่เห็นด้วยกับเรื่องนั้นๆ</td>
+                    </tr>
+                    <tr>
+                        <td>เล็กน้อย</td>
+                        <td>หมายถึง</td>
+                        <td>เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ เพียงเล็กน้อยหรือเห็นด้วย
+                            กับเรื่องนั้น ๆ เพียงเล็กน้อย</td>
+                    </tr>
+                    <tr>
+                        <td>มาก</td>
+                        <td>หมายถึง</td>
+                        <td> เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มาก หรือเห็นด้วยกับเรื่องนั้น ๆ มาก</td>
+                    </tr>
+                    <tr>
+                        <td>มากที่สุด</td>
+                        <td>หมายถึง</td>
+                        <td>เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้น ๆ มากที่สุด หรือเห็นด้วย
+                            กับเรื่องนั้นๆ มากที่สุด</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table border="1px" class="table2">
+                    <tr class="head-table">
+                        <th>ข้อที่</th>
+                        <th>คำถาม</th>
+                        <th>ไม่เลย</th>
+                        <th>เล็กน้อย</th>
+                        <th>มาก</th>
+                        <th>มากที่สุด</th>
+                    </tr>
+                    <tr>
+                        <tbody id="questionnaire">
+                        </tbody>    
+                    </tr>
+                    <tr class="span-info">
+                        <td colspan="2">รวมคะแนนประเมิณ</td>
+                        <td colspan="4" id="totalScore"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>ผลการประเมิณ</b></td>
+                        <td colspan="4" id="assessment"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="botton-info">
+                <img src="./logo.png">
+                <p>โครงการจัดทำโปรแกรมสำเร็จรูปในการสำรวจสุขภาพจิตในพื้นที่ ปี พ.ศ.2545</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    // ข้อมูลในอาร์เรย์
+    var data = [
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านรู้สึกว่าชีวิตของท่านมีความสุข" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านรู้สึกภูมิใจในตนเอง" },
+        {never:3, middle:2, big:1, biggest:0, question: "ท่านต้องไปรับการรักษาพยาบาลเสมอ ๆ เพื่อให้สามารถดำเนินชีวิตและทำงานได้" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านพึงพอใจในรูปร่างหน้าตาของท่าน" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านมีสัมพันธภาพที่ดีกับเพื่อนบ้าน" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านรู้สึกประสบความสำเร็จและความก้าวหน้าในชีวิต" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต" },
+        {never:3, middle:2, big:1, biggest:0, question: "ถ้าสิ่งต่างๆ ไม่เป็นไปตามที่คาดหวัง ท่านจะรู้สึกหงุดหงิด" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านสามารถปฏิบัติกิจวัตรประจำวันต่าง ๆ ด้วยตัวท่านเอง" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านมีความสุขกับการริเริ่มงานใหม่ๆ และมุ่งมั่นที่จะทำให้สำเร็จ" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านรู้สึกว่าชีวิตของท่านไร้ค่า ไม่มีประโยชน์" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านมีเพื่อนหรือญาติพี่น้องคอยช่วยเหลือท่านในยามที่ท่านต้องการ" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านมั่นใจว่าชุมชนที่ท่านอยู่อาศัยมีความปลอดภัยต่อท่าน" },
+        {never:0, middle:1, big:2, biggest:3, question: "ท่านมีโอกาสได้พักผ่อนคลายเครียด" }
+    ];
+
+    var questionnaireTable = document.getElementById('questionnaire');
+    var totalScoreCell = document.getElementById('totalScore');
+    var assessmentCell = document.getElementById('assessment');
+
+    // สร้างแถวของตารางแบบประเมิน
+    for (var i = 0; i < data.length; i++) {
+        var row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${i + 1}</td>
+            <td>${data[i].question}</td>
+            <td>
+                <label class='radio-container'>
+                    <input type='radio' name='choice_${i}' value='never' onclick='updateScore()'>
+                    <span class='checkmark'></span>
+                </label>
+            </td>
+            <td>
+                <label class='radio-container'>
+                    <input type='radio' name='choice_${i}' value='middle' onclick='updateScore()'>
+                    <span class='checkmark'></span>
+                </label>
+            </td>
+            <td>
+                <label class='radio-container'>
+                    <input type='radio' name='choice_${i}' value='big' onclick='updateScore()'>
+                    <span class='checkmark'></span>
+                </label>
+            </td>
+            <td>
+                <label class='radio-container'>
+                    <input type='radio' name='choice_${i}' value='biggest' onclick='updateScore()'>
+                    <span class='checkmark'></span>
+                </label>
+            </td>
+        `;
+        questionnaireTable.appendChild(row);
+    }
+
+    // คำนวณคะแนนทั้งหมด
+    function calculateTotalScore() {
+        var totalScore = 0;
+        var radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+
+        console.log(radioButtons.length);
+        console.log(data.length)
+
+        var checked_question_radio = radioButtons.length;
+        
+        
+
+        for (var i = 0; i < radioButtons.length; i++) {
+            var value = radioButtons[i].value;
+            totalScore+=data[i][value];
+            // console.log(totalScore);
+        }
+        
+        if(checked_question_radio===data.length){
+            return totalScore;
+        }else{
+            console.log("ไม่ต้องการแสดงค่าใด ๆ");
+        }
+
+        // return totalScore;
+    }
+
+    // อัปเดตคะแนนและเกณฑ์ประเมิน
+    function updateScore() {
+        
+        var totalScore = calculateTotalScore();
+        if(totalScore !== 0){
+            var radioButtons = document.querySelectorAll('input[type="radio"]');
+            var assessment = '';
+            if (totalScore >= 33 && totalScore <= 45) {
+                assessment = 'มีความสุขมากกว่าคนทั่วไป (good)';
+            } else if (totalScore >= 27 && totalScore <= 32) {
+                assessment = 'มีความสุขเท่ากับคนทั่วไป (fair)';
+            } else if (totalScore <= 26) {
+                assessment = 'มีความสุขน้อยกว่าคนทั่วไป (poor)';
+            }
+            totalScoreCell.innerHTML = totalScore;
+            assessmentCell.textContent = assessment;
+        }else{
+            document.getElementById("totalScore").textContent = "คะแนนจะแสดงเมื่อทำแบบสอบถามครบ";
+        }
+
+    }
+    
+</script>
+</html>

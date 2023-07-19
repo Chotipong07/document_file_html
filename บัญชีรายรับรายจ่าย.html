@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=TH+Sarabun+New&display=swap">
+    <script src="thaibath.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+    body {
+        font-family: 'TH Sarabun New', Arial, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }   
+    .container{
+        margin: 50px 50px 0 50px;
+
+    }           
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo img{
+        width: 160px;
+        height: 70px;
+        padding: 10px;
+
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns:  auto auto;
+        padding: 10px;
+
+    }
+    .grid-item{
+        padding-left: 10px;
+    }
+
+
+    table.GeneratedTable {
+      width: 100%;
+      background-color: #ffffff;
+      border-collapse: collapse;
+      border-width: 1px;
+      border-color: #333333;
+      border-style: solid;
+      color: #000000;
+      margin-top: 20px;
+    }
+    
+    table.GeneratedTable td, table.GeneratedTable th {
+      border-width: 1px;
+      border-color: #333333;
+      border-style: solid;
+      padding: 2px;
+    }
+    
+    table.GeneratedTable thead {
+      background-color: #d4d4d4;
+    }
+
+    table.GeneratedTable td:nth-child(2){
+        margin-left: 15px ;
+        margin-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    table.GeneratedTable td:nth-child(3){
+        margin-right: 15px ;
+        margin-left: 15px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+
+
+    td.column-1-row-12,
+    td.column-1-row-13 {
+      border-left: 5px solid white;
+    }
+    .name-info{
+        position: absolute; 
+        left:  100px;
+        top: -4px;
+  
+    }
+    .autograph{
+        position: relative;
+        margin-top: 20px;
+    }
+    .autograph2{
+        position: relative;
+    }
+    .autograph3{
+        position: relative;
+    }
+    .autograph4{
+        position: relative;
+    }
+    .autograph-info{
+        position: relative;
+        margin-top: 10px;
+    }
+    td{
+        height: 23px;
+    }
+    .position-info{
+        position: absolute; 
+        left:  90px;
+        top: -4px;
+    }
+    .position2-info{
+        position: absolute; 
+        left:  50px;
+        top: 18px;
+    }
+    .date-start-info{
+        position: absolute; 
+        left: 80px;
+        top: -4px;
+    }
+    .date-end-info{
+        position: absolute; 
+        left: 270px;
+        top: -4px;
+    }
+    .signature-info{
+        width: 100%;
+        margin: 0 325px 0 0;
+        text-align: center;
+    }
+    .date-payment-info{
+        position: absolute; 
+        left: 195px;
+        top: -3px;
+    }
+
+    .name-info-2{
+        position: absolute; 
+        left: 90px;
+        top: -3px; 
+    }
+
+    .name-info-3{
+        position: absolute; 
+        left: 90px;
+        top: -3px;
+
+    }
+
+    .GeneratedTable td:nth-child(1) {
+            width: 100px;
+            text-align: center;
+        }
+    .headder-changthai-to-text     {
+        padding-right: 20px;
+        text-align: right;
+    }
+    .changthai_text{
+        padding-left: 10px;
+    }
+    </style>
+</head>
+<body class="A4">
+    <section class="sheet padding-10mm">
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                <img src="loga_ACTSE.jpg" alt="#">
+            </div>
+            <div class="grid-container">
+                <div class="grid-item"><b>เลขที่ :</b></div>
+                <div class="grid-item">T2023-0049</div>
+                <div class="grid-item"><b>วันที่ :</b></div>
+                <div class="grid-item">25 พฤษภาคม 2566</div>
+            </div>
+        </div>
+        <div class="row">
+
+            <table class="GeneratedTable" style="border: none;">
+            <thead>
+                <tr>
+                    <th>วัน เดือน ปี</th>
+                    <th>รายละเอียด</th>
+                    <th>จำนวนเงิน (บาท)</th>
+                    <th>หมายเหตุ</th>
+                </tr>
+            </thead>
+            <tbody id="questionnaire">
+            </tbody>
+             <tbody>
+                <tr>
+                    <td style="border-left:none; border-bottom: none;"></td>
+                    <td><b>รวมทั้งสิ้น</b></td>
+                    <td style="text-align: right; background-color: #d4d4d4;" id="total_price"><b></b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td  style="border:none"></td>
+                    <td  class="headder-changthai-to-text" style="border-right: none;">(ภาษาไทย)</td>
+                    <td colspan="3" id="thai_text" class="changthai_text" style="border-left: none;"></td>
+                </tr>
+            </tbody>
+
+            </table>
+        </div>
+        <div>
+            <div  class="autograph">
+                <div style="text-indent: 2.5em;">ข้าไเจ้า.............................................................. (ผู้เบิกจ่าย)</div>
+                <div class="name-info"><span>นายอภิวัฒน์ ชาวาลี</span></div>
+            </div>
+            <div class="autograph2">
+                <div >ตำแหน่ง........................................................................
+                    ขอรับรองว่ารายจ่ายข้างต้นนี้ ไม่มีการเรียกใบเสร็จรับเงินจากผู้รับได้และข้าพเจ้าไปในงานของ
+                    ....................................................................................................................โดยแท้จริง
+                </div>
+                <div class="position-info"><span>กรรมการผู้จัดการ</span></div>
+                <div class="position2-info"><span>บริษัท แอคเซลเลเรท คอมมูนิตี้ เทคโนโลยี จำกัด</span></div>
+            </div>
+            <div class="autograph3">
+                <div>ตั้งแต่วันที่.............................................................
+                    ถึงวันที่................................................................</div>
+                    <div class="date-start-info"><span>25 พฤษภาคม 2566</span></div>
+                    <div class="date-end-info"><span>25 พฤษภาคม 2566</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="signature-info">
+                <div  class="autograph-info">
+                    <div>ลงชื่อ............................................................ (ผู้เบิกจ่าย)</div>
+                    <div><span>(นายอภิวัฒน์ ชาวาลี)</span></div>
+                    <div class="name-info-2"><span>นายอภิวัฒน์ ชาวาลี</span></div>
+                </div>
+                <div  class="autograph-info">
+                    <div>ลงชื่อ............................................................ (ผู้อนุมัติ)</div>
+                    <div><span>(นายอภิวัฒน์ ชาวาลี)</span></div>
+                    <div class="name-info-3"><span>นายอภิวัฒน์ ชาวาลี</span></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 10px;">
+            <div>สำหรับบัญชี</div>
+            <div class="autograph4">จ่ายผ่าน (เงินสดย่อย/เงินโอน) เมื่อวันที่...............................................................<div class="date-payment-info"><span>25 พฤษภาคม 2566</span></div></div>
+            <div>*เอกสารนี้ใช้แทนเอกสารที่ไม่สามารถได้รับใบเสร็จรับเงินได้ สำหรับผู้ให้บริการที่ไม่อยู่ในระบบภาษีมูลค่าเพิ่ม เพื่อใช้เป็นเอกสารประกอบการเบิกจ่ายเงินที่สำรองไปก่อน</div>
+            
+        </div>
+    </section>
+    </div>
+</body>
+<script>
+        var data = [
+            { day: "25/05/2566", detail: "Open AI- ChatGPT", price: 100.20, note: "" },
+            { day: "25/05/2566", detail: "Open AI- ChatGPT Pro", price: 200.98, note: "" },
+            { day: "25/05/2566", detail: "Open AI- ChatGPT", price: 300.69, note: "" }
+        ];
+  
+    var questionnaireTable = document.getElementById('questionnaire');
+  
+    for (var i = 0; i < 12; i++) {
+    var row = document.createElement('tr');
+    var rowData = i < data.length ? data[i] : { day: "", detail: "", price: "", note: "" };
+    row.innerHTML = `
+      <td>${rowData.day}</td>
+      <td>${rowData.detail}</td>
+      <td style='text-align:right'><b>${rowData.price}</b></td>
+      <td>${rowData.note}</td>
+    `;
+    questionnaireTable.appendChild(row);
+
+  }
+
+  var sum = 0;
+  data.forEach(item => {
+    sum += item.price
+  })
+
+  let total_el = document.querySelector("#total_price")
+
+  total_el.innerHTML = `<b>${sum}</b>`
+
+  var thaiText = ThaiNumberToText(sum.toFixed(2));
+  var thaiTextElement = document.getElementById("thai_text");
+  thaiTextElement.innerHTML = `<b>${thaiText}</b>`;
+
+</script>
+</html>
